@@ -1,0 +1,761 @@
+/*
+  M&A Auto Service — the house dark-professional canon, signal amber.
+
+  Sibling to the Showroom Shine and CJ Valeting systems: graphite ground,
+  hairline rules as the only structural device, one rationed chromatic accent,
+  wide-stretched Archivo caps against plain sentence-case body, flat depth.
+
+  The one divergence forced by this client: there are no photographs of the
+  business, and none may be invented. Where those sites seat the hero on the
+  owner's own work, this one is lit instead of shot — a single amber worklamp
+  pool falling across the graphite, which is what the unit looks like at eight
+  in the evening with the door up.
+*/
+
+:root {
+  /* Ground */
+  --graphite-ground: #0c0d0f;
+  --graphite-panel: #131519;
+  --graphite-raised: #191c21;
+
+  /* Accent — signal amber, rationed */
+  --signal-amber: #ffa724;
+  --amber-bright: #ffc164;
+  --amber-ink: #1a1204;
+
+  /* Text ramp */
+  --workshop-white: #f4f5f6;
+  --steel-mid: #c3c8ce;
+  --steel-dim: #99a0a8;
+
+  /* Rules */
+  --hairline: rgba(244, 245, 246, 0.12);
+  --hairline-strong: rgba(244, 245, 246, 0.22);
+
+  /* Shape */
+  --r-focus: 2px;
+  --r-button: 3px;
+  --r-frame: 4px;
+  --r-card: 5px;
+
+  /* Rhythm */
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --block: 3rem;
+  --grid-gap: clamp(1.5rem, 3vw, 2.5rem);
+  --section-pad: clamp(4.5rem, 10vh, 7.5rem);
+  --container: 1180px;
+  --measure: 820px;
+
+  /* Motion */
+  --ease-state: 150ms ease-out;
+  --ease-settle: cubic-bezier(0.22, 1, 0.36, 1);
+
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--graphite-ground);
+  color: var(--workshop-white);
+  font-family: var(--font-archivo), "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* --- Browser surfaces carry the design too ------------------------------ */
+
+::selection {
+  background: var(--signal-amber);
+  color: var(--amber-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--signal-amber);
+  outline-offset: 3px;
+  border-radius: var(--r-focus);
+}
+
+* {
+  caret-color: var(--signal-amber);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2b3038 var(--graphite-ground);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--graphite-ground);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2b3038;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a414b;
+}
+
+/* --- Type ---------------------------------------------------------------- */
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 650;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  font-stretch: 120%;
+  text-wrap: balance;
+}
+
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+/* Sticky topbar clearance for in-page anchors. */
+section[id] {
+  scroll-margin-top: 84px;
+}
+
+/* --- Shared furniture ---------------------------------------------------- */
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  border-top: 1px solid var(--hairline);
+  padding-block: var(--section-pad);
+}
+
+.sectionHead {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.sectionBody {
+  margin-top: var(--block);
+}
+
+.label {
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--signal-amber);
+  font-stretch: 100%;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --- Buttons ------------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 48px;
+  padding: 0.95rem 1.7rem;
+  border-radius: var(--r-button);
+  border: 1px solid transparent;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 650;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-stretch: 112%;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--ease-state), color var(--ease-state),
+    border-color var(--ease-state), transform var(--ease-state);
+}
+
+.btnPrimary {
+  background: var(--signal-amber);
+  color: var(--amber-ink);
+  box-shadow: 0 12px 30px -14px rgba(255, 167, 36, 0.55);
+}
+
+.btnPrimary:hover {
+  background: var(--amber-bright);
+  transform: translateY(-1px);
+}
+
+.btnPrimary:active {
+  transform: translateY(1px);
+}
+
+.btnGhost {
+  background: transparent;
+  color: var(--workshop-white);
+  border-color: var(--hairline-strong);
+}
+
+.btnGhost:hover {
+  border-color: var(--signal-amber);
+  color: var(--amber-bright);
+  transform: translateY(-1px);
+}
+
+.btnGhost:active {
+  transform: translateY(1px);
+}
+
+.btnSmall {
+  min-height: 44px;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .btnPrimary:hover,
+  .btnGhost:hover,
+  .btnPrimary:active,
+  .btnGhost:active {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* --- Topbar -------------------------------------------------------------- */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(12, 13, 15, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--hairline);
+}
+
+.topbarInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 64px;
+  padding-block: 0.7rem;
+}
+
+.brandMark {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-stretch: 118%;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.brandMarkShort {
+  display: none;
+}
+
+/* --- Hero ---------------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 92svh;
+  overflow: hidden;
+  padding-block: clamp(3.5rem, 9vh, 6rem) 0;
+}
+
+/*
+  The worklamp. Two pools of amber light and one cool ambient fall, layered
+  over the graphite. This is the hero image: there is no photograph of this
+  business and none may be invented, so the unit is lit rather than shot.
+*/
+.heroLight {
+  position: absolute;
+  inset: -20% -10% -10%;
+  z-index: -2;
+  background:
+    radial-gradient(
+      56% 42% at 20% 28%,
+      rgba(255, 167, 36, 0.2) 0%,
+      rgba(255, 167, 36, 0.07) 38%,
+      transparent 72%
+    ),
+    radial-gradient(
+      46% 38% at 82% 70%,
+      rgba(126, 158, 196, 0.11) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      130% 70% at 50% 116%,
+      rgba(255, 167, 36, 0.09) 0%,
+      transparent 62%
+    );
+  pointer-events: none;
+}
+
+/* Fine grain: kills gradient banding and gives the light something to sit in. */
+.heroGrain {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.34'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.heroInner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heroRating {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.stars {
+  display: inline-flex;
+  gap: 3px;
+}
+
+.starIcon {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.ratingScore {
+  font-weight: 700;
+  font-stretch: 112%;
+  letter-spacing: 0.02em;
+}
+
+.ratingCount {
+  color: var(--steel-mid);
+  font-size: 0.95rem;
+}
+
+.ratingTick {
+  width: 1px;
+  height: 14px;
+  background: var(--hairline-strong);
+}
+
+.heroName {
+  margin-top: 1.6rem;
+  font-size: clamp(2.9rem, 9.2vw, 6rem);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.005em;
+  text-transform: uppercase;
+  font-stretch: 125%;
+  max-width: 14ch;
+}
+
+.heroName span {
+  display: block;
+}
+
+.heroSub {
+  margin-top: 1.35rem;
+  color: var(--steel-mid);
+  font-size: clamp(1rem, 1.6vw, 1.12rem);
+  letter-spacing: 0.01em;
+}
+
+.heroTagline {
+  margin-top: 1.1rem;
+  max-width: 46ch;
+  color: var(--steel-dim);
+  font-size: clamp(1.02rem, 1.5vw, 1.14rem);
+  line-height: 1.6;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 2.4rem;
+}
+
+.heroRail {
+  border-top: 1px solid var(--hairline);
+  margin-top: clamp(3rem, 7vh, 5rem);
+}
+
+.heroRailInner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1.6rem;
+  padding-block: 1.15rem;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--steel-dim);
+}
+
+.heroRailItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.heroRailItem::after {
+  content: "";
+  width: 1px;
+  height: 11px;
+  background: var(--hairline-strong);
+}
+
+/* The location is the last child, so the last service must not trail a tick. */
+.heroRailItem:nth-last-child(2)::after {
+  display: none;
+}
+
+.heroRailLocation {
+  margin-left: auto;
+  color: var(--signal-amber);
+}
+
+/* --- Services ------------------------------------------------------------ */
+
+.serviceList {
+  border-top: 1px solid var(--hairline);
+}
+
+.serviceRow {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  gap: 1rem var(--grid-gap);
+  align-items: baseline;
+  padding-block: 2.1rem;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.serviceTitle {
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  font-weight: 650;
+  text-transform: uppercase;
+  font-stretch: 118%;
+  letter-spacing: 0.02em;
+}
+
+.serviceBody {
+  color: var(--steel-mid);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 62ch;
+}
+
+.serviceFootnote {
+  margin-top: 1.9rem;
+  color: var(--steel-dim);
+}
+
+/* --- Reviews ------------------------------------------------------------- */
+
+.reviewGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+
+.reviewCard {
+  display: flex;
+  flex-direction: column;
+  background: var(--graphite-panel);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-card);
+  padding: 2rem 2rem 1.7rem;
+}
+
+.reviewQuote {
+  flex: 1;
+  font-size: clamp(1.18rem, 2.1vw, 1.5rem);
+  line-height: 1.45;
+  letter-spacing: -0.005em;
+  color: var(--workshop-white);
+  text-wrap: pretty;
+}
+
+.reviewAttrib {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-top: 1.7rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--hairline);
+  font-size: 0.88rem;
+}
+
+.reviewName {
+  font-weight: 650;
+  letter-spacing: 0.02em;
+}
+
+.reviewSource {
+  color: var(--steel-dim);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* --- Location ------------------------------------------------------------ */
+
+.locationLead {
+  max-width: 56ch;
+  color: var(--steel-mid);
+  font-size: clamp(1.05rem, 1.7vw, 1.2rem);
+  line-height: 1.6;
+}
+
+.locationGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--grid-gap);
+  margin-top: var(--block);
+  border-top: 1px solid var(--hairline);
+  padding-top: 2rem;
+}
+
+.locationCell dt {
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--signal-amber);
+}
+
+.locationCell dd {
+  margin: 0.9rem 0 0;
+  color: var(--steel-mid);
+  line-height: 1.55;
+}
+
+.locationHours {
+  color: var(--workshop-white);
+  font-weight: 650;
+  font-stretch: 112%;
+  letter-spacing: 0.02em;
+}
+
+.locationHoursNote {
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--steel-dim);
+  font-size: 0.92rem;
+  font-weight: 400;
+  font-stretch: 100%;
+  letter-spacing: 0;
+}
+
+.textLink {
+  color: var(--workshop-white);
+  text-decoration: underline;
+  text-decoration-color: var(--hairline-strong);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: color var(--ease-state), text-decoration-color var(--ease-state);
+}
+
+.textLink:hover {
+  color: var(--amber-bright);
+  text-decoration-color: var(--signal-amber);
+}
+
+/* --- Booking footer ------------------------------------------------------ */
+
+.booking {
+  background: var(--graphite-panel);
+  border-top: 1px solid var(--hairline);
+  padding-block: var(--section-pad);
+  text-align: center;
+}
+
+.bookingLead {
+  margin: 1.5rem auto 0;
+  max-width: 48ch;
+  color: var(--steel-mid);
+  font-size: clamp(1.05rem, 1.7vw, 1.2rem);
+  line-height: 1.6;
+}
+
+.bookingPhoneLabel {
+  display: block;
+  margin-top: 3rem;
+}
+
+.bookingPhone {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--signal-amber);
+  font-size: clamp(2.1rem, 7vw, 4.4rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: 0.005em;
+  text-transform: uppercase;
+  font-stretch: 125%;
+  text-decoration: none;
+  transition: color var(--ease-state);
+}
+
+.bookingPhone:hover {
+  color: var(--amber-bright);
+}
+
+.bookingAddress {
+  margin-top: 2.2rem;
+  color: var(--steel-mid);
+}
+
+.footer {
+  border-top: 1px solid var(--hairline);
+  padding-block: 2.5rem;
+  color: var(--steel-dim);
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+/* --- The one authored motion moment -------------------------------------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .rise {
+    animation: rise 900ms var(--ease-settle) backwards;
+  }
+
+  .rise-1 { animation-delay: 60ms; }
+  .rise-2 { animation-delay: 150ms; }
+  .rise-3 { animation-delay: 240ms; }
+  .rise-4 { animation-delay: 330ms; }
+  .rise-5 { animation-delay: 420ms; }
+
+  .heroLight {
+    animation: lampUp 1400ms var(--ease-settle) backwards;
+  }
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes lampUp {
+    from {
+      opacity: 0;
+      filter: blur(18px);
+    }
+    to {
+      opacity: 1;
+      filter: none;
+    }
+  }
+}
+
+/* --- Breakpoints --------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .reviewGrid,
+  .locationGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .serviceRow {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.6rem;
+  }
+
+  .locationGrid {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: 96svh;
+  }
+
+  .brandMarkFull {
+    display: none;
+  }
+
+  .brandMarkShort {
+    display: inline;
+  }
+
+  .heroActions .btn {
+    flex: 1 1 100%;
+  }
+
+  .heroRailLocation {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .heroRailItem:last-of-type::after {
+    display: none;
+  }
+}

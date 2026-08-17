@@ -1,0 +1,60 @@
+{
+  "title": "M&A Auto Service — choose the visual world",
+  "question": "The roll assigned The Trade Counter. Keep it, take an alternate, or re-roll. Three more challengers wait in the re-roll pool (a defaced club sleeve, cephalopod skin, and a pastel mascot sheet) — none can carry a Bristol garage's trust job.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "The Trade Counter",
+      "kicker": "THE ROLL",
+      "lineage": "British motor factor parts counter — shelf-edge labels, dockets, stock boards",
+      "thesis": "The industrial estate's own retail language, turned on the garage itself: high-vis amber, black keylines, and one docket that hands you the number.",
+      "palette": ["#FFB400", "#14120F", "#F2EBDC", "#1F7A3D"],
+      "materials": ["high-vis amber", "black keyline rules", "docket card", "dot-matrix numerals"],
+      "viewport": "Full-bleed amber. M&A AUTO SERVICE set as a heavy shelf-edge header in black condensed caps, then a torn-edge counter docket carrying 07882 209735 at ticket scale as the primary tap, with 4.8 / 102 stamped beside it like a stock rating.",
+      "risk": "Catalogue grammar could imply they sell parts. Mitigated by carrying only real services and real numbers in the rows — never a price or a part code.",
+      "case": "Wins both axes. A north Bristol driver knows the amber-and-black trade counter by heart, and it is honest about being a working unit on an estate rather than a forecourt."
+    },
+    {
+      "id": "challenger-oscilloscope",
+      "label": "Signal Bench",
+      "lineage": "CRT oscilloscope on a signal bench",
+      "thesis": "The trace snapping out of noise and locking still — diagnosis as the whole visual argument.",
+      "palette": ["#39FF6A", "#0A0D0A", "#4A554A", "#FFB000"],
+      "materials": ["phosphor glass", "etched graticule", "seven-segment readouts"],
+      "viewport": "Near-black glass, a green trace riding a ten-division grid, the phone number set as an armed amber readout.",
+      "risk": "Green-on-black electronics lab reads as tech, not garage, and buries the one thing that matters.",
+      "case": "Fuses on meaning — 'diagnosed the issue quickly' is literally this — but loses audience identification badly: a driver with a dead battery does not see themselves in a lab instrument."
+    },
+    {
+      "id": "challenger-brick",
+      "label": "Build Instructions",
+      "lineage": "brick build-instruction booklet",
+      "thesis": "Wordless exploded steps: taken apart, understood, put back exactly right.",
+      "palette": ["#1B95D6", "#0B0B0B", "#C4281B", "#F5C518"],
+      "materials": ["sky-blue instruction stock", "black keyline ink", "1:1 call-out boxes"],
+      "viewport": "Sky-blue page, oversized step numerals, an exploded call-out with arrows seating each piece.",
+      "risk": "Toy-instruction sky blue reads playful, which is the wrong register for a trust decision made in a hurry.",
+      "case": "The exploded-diagram grammar is real automotive DNA (it is Haynes-manual lineage), but the toy framing costs the trust this page exists to win."
+    },
+    {
+      "id": "challenger-onebit",
+      "label": "One-Bit Desktop",
+      "lineage": "early one-bit desktop, dithered grays and pixel chrome",
+      "thesis": "Everything in overlapping windows, every tone a stipple dither, nothing but black and white pixels.",
+      "palette": ["#000000", "#FFFFFF", "#8C8C8C", "#000000"],
+      "materials": ["ordered stipple dither", "one-pixel window chrome", "marching ants"],
+      "viewport": "A white desktop plane with a titled window holding the garage's details in pixel caps.",
+      "risk": "A retro-computing joke on a page whose job is to make a stranger trust a mechanic.",
+      "case": "Fuses poorly: it is a coherent interface language, but nothing in it belongs to a Bristol driver's world, and one-bit dither cannot carry a 4.8-star reputation."
+    }
+  ],
+  "reroll": true,
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "The independent-garage site done properly: dark graphite, one confident accent, big type, phone number pinned, reviews stacked.",
+    "viewport": "The arrangement a visitor expects, at full craft and no irony.",
+    "risk": "Indistinguishable from every other garage site, which is the point of taking it."
+  },
+  "steer": true
+}
