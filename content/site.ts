@@ -68,11 +68,13 @@ export const hero = {
   railLocation: "Hallen · Bristol BS10 7SE", // [google]
   // The hairline-framed fact plate in the first viewport. Every row is a fact
   // already stated elsewhere in this file; nothing new is asserted here.
+  // The phone number is deliberately NOT a row: it is already the sticky
+  // topbar button and the primary call to action in the same viewport, and a
+  // third amber number here would compete with the one thing the page is for.
   plateHeading: "At a glance",
   plateRatingLabel: "Google rating",
   plateHoursLabel: "Closing time",
   plateWhereLabel: "The unit",
-  plateCallLabel: "Call the workshop",
 } as const;
 
 export const services = {

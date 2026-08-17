@@ -358,31 +358,39 @@ section[id] {
   padding: 1.6rem 1.7rem 0.4rem;
 }
 
+/*
+  Heading over list, one label system. The plate head takes the house label
+  tier (amber, 0.76/0.16em); the row labels sit a step below it in steel, so
+  the plate does not read as two competing label colors at one size. Amber
+  inside the frame is limited to this head and the rating stars, which keeps
+  the ration intact and leaves the call button the loudest amber on the page.
+*/
 .heroPlateHead {
   font-size: 0.76rem;
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--steel-dim);
-  padding-bottom: 1.2rem;
+  color: var(--signal-amber);
+  padding-bottom: 1.15rem;
   border-bottom: 1px solid var(--hairline);
 }
 
 .heroPlateRow {
-  padding-block: 1.15rem;
+  padding-block: 1.1rem;
   border-bottom: 1px solid var(--hairline);
 }
 
 .heroPlateRow:last-child {
   border-bottom: 0;
+  padding-bottom: 1.5rem;
 }
 
 .heroPlateRow dt {
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 600;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
-  color: var(--signal-amber);
+  color: var(--steel-dim);
 }
 
 .heroPlateRow dd {
@@ -390,21 +398,6 @@ section[id] {
   color: var(--steel-mid);
   font-size: 0.98rem;
   line-height: 1.5;
-}
-
-.heroPlatePhone {
-  display: inline-block;
-  color: var(--signal-amber);
-  font-size: clamp(1.35rem, 2.2vw, 1.72rem);
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  font-stretch: 118%;
-  text-decoration: none;
-  transition: color var(--ease-state);
-}
-
-.heroPlatePhone:hover {
-  color: var(--amber-bright);
 }
 
 .heroRating {
@@ -762,14 +755,64 @@ section[id] {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  /* The hero grows to fit the stacked plate rather than clipping it. */
+  /*
+    Stacked, the hero must still land the foot rail inside the first viewport
+    on a phone, which the contract names as a promise and which is the stated
+    primary device. The copy block and the plate are both tightened so the
+    rail clears the fold rather than falling under it.
+  */
+  /*
+    The topbar is sticky, so it takes 64px of flow at the top of the page.
+    A 100svh hero under it overflows the first screen by exactly that much
+    and clips the foot rail, so the height discounts the bar.
+  */
   .hero {
-    min-height: 0;
-    padding-block: clamp(3rem, 8vh, 5rem) 0;
+    min-height: calc(100svh - 64px);
+    padding-block: clamp(1.5rem, 3.5vh, 2.5rem) 0;
+  }
+
+  .heroGrid {
+    gap: 0;
+  }
+
+  .heroRail {
+    margin-top: 1.6rem;
+  }
+
+  .heroName {
+    font-size: clamp(2.4rem, 10.5vw, 3.4rem);
+  }
+
+  .heroSub {
+    margin-top: 0.95rem;
+  }
+
+  .heroTagline {
+    margin-top: 0.8rem;
+  }
+
+  .heroActions {
+    margin-top: 1.5rem;
   }
 
   .heroPlate {
-    margin-top: 2.6rem;
+    margin-top: 1.6rem;
+    padding: 1.15rem 1.25rem;
+  }
+
+  /*
+    Stacked, the plate would push the foot rail off a 844px screen. The two
+    deferred rows are both restated in full in "Where to find us", so on a
+    phone the plate carries the rating alone, which is the one fact in it that
+    the rest of the page does not repeat.
+  */
+  .heroPlateRowDeferred {
+    display: none;
+  }
+
+  .heroPlateRow {
+    padding-block: 0.9rem 0;
+    border-bottom: 0;
   }
 
   .serviceRow {

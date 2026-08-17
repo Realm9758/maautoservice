@@ -106,23 +106,19 @@ export default function Page() {
                     </dd>
                   </div>
 
-                  <div className="heroPlateRow">
+                  {/*
+                    Both rows are repeated in full in "Where to find us". On a
+                    phone they stand down so the foot rail keeps its place in
+                    the first viewport; nothing is lost, only reordered.
+                  */}
+                  <div className="heroPlateRow heroPlateRowDeferred">
                     <dt>{hero.plateHoursLabel}</dt>
                     <dd>{location.hoursValue}</dd>
                   </div>
 
-                  <div className="heroPlateRow">
+                  <div className="heroPlateRow heroPlateRowDeferred">
                     <dt>{hero.plateWhereLabel}</dt>
                     <dd>{contact.addressLine}</dd>
-                  </div>
-
-                  <div className="heroPlateRow">
-                    <dt>{hero.plateCallLabel}</dt>
-                    <dd>
-                      <a className="heroPlatePhone" href={contact.phoneHref}>
-                        {contact.phoneDisplay}
-                      </a>
-                    </dd>
                   </div>
                 </dl>
               </div>
