@@ -795,9 +795,21 @@ section[id] {
     margin-top: 1.5rem;
   }
 
+  /*
+    Stacked, the plate holds one row, so the frame comes off. A bordered box
+    around a single line is chrome, not structure: on a phone the rating sits
+    on its own hairline rule instead, and the plate head goes with the frame.
+  */
   .heroPlate {
-    margin-top: 1.6rem;
-    padding: 1.15rem 1.25rem;
+    margin-top: 1.9rem;
+    padding: 0;
+    background: none;
+    border: 0;
+    border-top: 1px solid var(--hairline);
+  }
+
+  .heroPlateHead {
+    display: none;
   }
 
   /*
@@ -811,7 +823,7 @@ section[id] {
   }
 
   .heroPlateRow {
-    padding-block: 0.9rem 0;
+    padding-block: 1.15rem 0;
     border-bottom: 0;
   }
 
