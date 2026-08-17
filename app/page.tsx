@@ -61,33 +61,70 @@ export default function Page() {
       <main id="top">
         <section className="hero">
           <div className="heroLight" />
-          <div className="heroGrain" />
 
           <div className="heroInner">
-            <div className="container">
-              <p className="heroRating rise rise-1">
-                <Stars />
-                <span className="ratingScore">{rating.score}</span>
-                <span className="ratingTick" aria-hidden="true" />
-                <span className="ratingCount">{rating.countLabel}</span>
-              </p>
+            <div className="container heroGrid">
+              <div>
+                <h1 className="heroName rise rise-1">
+                  {hero.nameLines.map((line) => (
+                    <span key={line}>{line}</span>
+                  ))}
+                </h1>
 
-              <h1 className="heroName rise rise-2">
-                {hero.nameLines.map((line) => (
-                  <span key={line}>{line}</span>
-                ))}
-              </h1>
+                <p className="heroSub rise rise-2">{hero.subLine}</p>
+                <p className="heroTagline rise rise-2">{hero.tagline}</p>
 
-              <p className="heroSub rise rise-3">{hero.subLine}</p>
-              <p className="heroTagline rise rise-3">{hero.tagline}</p>
+                <div className="heroActions rise rise-3">
+                  <a className="btn btnPrimary" href={contact.phoneHref}>
+                    {hero.callCta}
+                  </a>
+                  <a className="btn btnGhost" href="#find-us">
+                    {hero.secondaryCta}
+                  </a>
+                </div>
+              </div>
 
-              <div className="heroActions rise rise-4">
-                <a className="btn btnPrimary" href={contact.phoneHref}>
-                  {hero.callCta}
-                </a>
-                <a className="btn btnGhost" href="#find-us">
-                  {hero.secondaryCta}
-                </a>
+              {/*
+                The sibling sites put a photograph in this frame. There is none
+                here, so the frame holds the facts instead. Nothing in it is
+                asserted for the first time.
+              */}
+              <div className="heroPlate rise rise-4">
+                <p className="heroPlateHead">{hero.plateHeading}</p>
+
+                <dl>
+                  <div className="heroPlateRow">
+                    <dt>{hero.plateRatingLabel}</dt>
+                    <dd className="heroRating">
+                      <Stars />
+                      <span className="ratingScore">{rating.score}</span>
+                      <span className="visuallyHidden">
+                        {` out of ${rating.best} on Google, `}
+                      </span>
+                      <span className="ratingTick" aria-hidden="true" />
+                      <span className="ratingCount">{rating.countLabel}</span>
+                    </dd>
+                  </div>
+
+                  <div className="heroPlateRow">
+                    <dt>{hero.plateHoursLabel}</dt>
+                    <dd>{location.hoursValue}</dd>
+                  </div>
+
+                  <div className="heroPlateRow">
+                    <dt>{hero.plateWhereLabel}</dt>
+                    <dd>{contact.addressLine}</dd>
+                  </div>
+
+                  <div className="heroPlateRow">
+                    <dt>{hero.plateCallLabel}</dt>
+                    <dd>
+                      <a className="heroPlatePhone" href={contact.phoneHref}>
+                        {contact.phoneDisplay}
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
               </div>
             </div>
           </div>
@@ -185,9 +222,6 @@ export default function Page() {
           <div className="container">
             <h2 className="sectionHead">{booking.heading}</h2>
             <p className="bookingLead">{booking.lead}</p>
-            <span className="label bookingPhoneLabel">
-              {booking.phoneLabel}
-            </span>
             <a className="bookingPhone" href={contact.phoneHref}>
               {contact.phoneDisplay}
             </a>

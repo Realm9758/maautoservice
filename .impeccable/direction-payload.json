@@ -1,29 +1,29 @@
 {
-  "title": "M&A Auto Service — choose the visual world",
-  "question": "The roll assigned The Trade Counter. Keep it, take an alternate, or re-roll. Three more challengers wait in the re-roll pool (a defaced club sleeve, cephalopod skin, and a pastel mascot sheet) — none can carry a Bristol garage's trust job.",
+  "title": "M&A Auto Service: choose the visual world",
+  "question": "The roll assigned The Trade Counter. Keep it, take an alternate, or re-roll. Three more challengers wait in the re-roll pool (a defaced club sleeve, cephalopod skin, and a pastel mascot sheet), none of which can carry a Bristol garage's trust job.",
   "options": [
     {
       "id": "assigned",
       "label": "The Trade Counter",
       "kicker": "THE ROLL",
-      "lineage": "British motor factor parts counter — shelf-edge labels, dockets, stock boards",
+      "lineage": "British motor factor parts counter: shelf-edge labels, dockets, stock boards",
       "thesis": "The industrial estate's own retail language, turned on the garage itself: high-vis amber, black keylines, and one docket that hands you the number.",
       "palette": ["#FFB400", "#14120F", "#F2EBDC", "#1F7A3D"],
       "materials": ["high-vis amber", "black keyline rules", "docket card", "dot-matrix numerals"],
       "viewport": "Full-bleed amber. M&A AUTO SERVICE set as a heavy shelf-edge header in black condensed caps, then a torn-edge counter docket carrying 07882 209735 at ticket scale as the primary tap, with 4.8 / 102 stamped beside it like a stock rating.",
-      "risk": "Catalogue grammar could imply they sell parts. Mitigated by carrying only real services and real numbers in the rows — never a price or a part code.",
+      "risk": "Catalogue grammar could imply they sell parts. Mitigated by carrying only real services and real numbers in the rows, never a price or a part code.",
       "case": "Wins both axes. A north Bristol driver knows the amber-and-black trade counter by heart, and it is honest about being a working unit on an estate rather than a forecourt."
     },
     {
       "id": "challenger-oscilloscope",
       "label": "Signal Bench",
       "lineage": "CRT oscilloscope on a signal bench",
-      "thesis": "The trace snapping out of noise and locking still — diagnosis as the whole visual argument.",
+      "thesis": "The trace snapping out of noise and locking still: diagnosis as the whole visual argument.",
       "palette": ["#39FF6A", "#0A0D0A", "#4A554A", "#FFB000"],
       "materials": ["phosphor glass", "etched graticule", "seven-segment readouts"],
       "viewport": "Near-black glass, a green trace riding a ten-division grid, the phone number set as an armed amber readout.",
       "risk": "Green-on-black electronics lab reads as tech, not garage, and buries the one thing that matters.",
-      "case": "Fuses on meaning — 'diagnosed the issue quickly' is literally this — but loses audience identification badly: a driver with a dead battery does not see themselves in a lab instrument."
+      "case": "Fuses on meaning, since 'diagnosed the issue quickly' is literally this, but loses audience identification badly: a driver with a dead battery does not see themselves in a lab instrument."
     },
     {
       "id": "challenger-brick",

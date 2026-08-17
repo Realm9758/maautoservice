@@ -9,7 +9,7 @@
  * base, so anything absent from it is absent from this file and from the page.
  *
  * Address note: [google] renders the address as "Estate, Hallen Indusrial,
- * Severn Rd, Hallen, Bristol BS10 7SE" — Google's own field order is scrambled
+ * Severn Rd, Hallen, Bristol BS10 7SE". Google's own field order is scrambled
  * and "Industrial" is misspelt on the listing. It is normalised here to
  * "Hallen Industrial Estate, Severn Road, Hallen, Bristol BS10 7SE". The
  * postcode, street and locality are unchanged. Recorded in the README.
@@ -53,16 +53,26 @@ export const rating = {
 
 export const hero = {
   nameLines: ["M&A", "Auto Service"] as string[],
-  subLine: "Independent mechanic · Hallen Industrial Estate, Bristol",
-  // Every clause below is carried by [google]: the rating, the count, the
-  // location, and the fact that the business takes appointments.
+  // "Mechanic" is the [google] business category, verbatim. The word
+  // "independent" was removed: nothing published says whether the business is
+  // a sole trader, a chain branch or a franchise, so the page does not say.
+  subLine: "Mechanic · Hallen Industrial Estate, Bristol",
+  // Both clauses are [google]: the 4.8 from 102 reviews, and the location.
   tagline:
-    "An independent workshop on the Hallen estate, rated 4.8 by 102 people. Ring and tell us what the car is doing.",
-  callCta: "Call 07882 209735",
+    "A workshop on the Hallen estate, rated 4.8 by 102 people. Ring and tell us what the car is doing.",
+  callCta: "Call 07882 209735", // the number is [google]
   secondaryCta: "Where to find us",
-  // The quiet index along the foot of the first viewport.
+  // The quiet index along the foot of the first viewport. Same three services
+  // as the list below, so the same evidence carries them.
   railItems: ["Diagnostics", "Batteries", "Repairs & servicing"] as string[],
-  railLocation: "Hallen · Bristol BS10 7SE",
+  railLocation: "Hallen · Bristol BS10 7SE", // [google]
+  // The hairline-framed fact plate in the first viewport. Every row is a fact
+  // already stated elsewhere in this file; nothing new is asserted here.
+  plateHeading: "At a glance",
+  plateRatingLabel: "Google rating",
+  plateHoursLabel: "Closing time",
+  plateWhereLabel: "The unit",
+  plateCallLabel: "Call the workshop",
 } as const;
 
 export const services = {
@@ -71,18 +81,21 @@ export const services = {
   // in the reviews below; general repairs and servicing is the [google]
   // "Mechanic" category itself. No MOT claim: whether this is a test centre is
   // not published anywhere, and it is a licensed status that cannot be guessed.
+  // The descriptions restate the evidence and nothing more. No promise about
+  // method, turnaround, testing steps or booking route appears here, because
+  // the business has never published one.
   items: [
     {
       title: "Diagnostics",
-      body: "Plugged in and the fault traced, so you are told what it actually is before anything gets replaced.",
+      body: "Working out what is actually wrong with the car.",
     },
     {
       title: "Batteries",
-      body: "Tested, and replaced when that is what the car needs.",
+      body: "Batteries supplied and replaced.",
     },
     {
       title: "Repairs & servicing",
-      body: "General mechanical work on the car, booked in over the phone.",
+      body: "General mechanical work on the car.",
     },
   ],
   footnote: "Something not listed here? Ring and ask.",
@@ -111,10 +124,15 @@ export const reviews = {
 
 export const location = {
   heading: "Where to find us",
-  lead: "The workshop is a unit on Hallen Industrial Estate, off Severn Road.",
+  // The address itself is on Severn Road [google], so the lead says "on",
+  // not "off". No claim is made about the approach or the surrounding roads.
+  lead: "The workshop is a unit on Hallen Industrial Estate, Severn Road.",
   addressLabel: "The unit",
   hoursLabel: "Hours",
-  hoursValue: "Until 9pm",
+  // [google] showed "Open · Closes 9 pm" on the day of capture and publishes
+  // no weekly pattern. The page attributes the hour to the listing rather than
+  // asserting it as a standing opening time, and sends people to the phone.
+  hoursValue: "Google lists a 9pm close",
   hoursNote: "Ring to check the day you need.",
   findUsLabel: "Directions",
 } as const;
@@ -122,7 +140,6 @@ export const location = {
 export const booking = {
   heading: "Book the car in",
   lead: "One call sorts it. Tell us what the car is doing and when you can get it to us.",
-  phoneLabel: "Call the workshop",
   smallprint: [
     "M&A Auto Service, Hallen Industrial Estate, Severn Road, Hallen, Bristol BS10 7SE.",
   ],
@@ -136,7 +153,7 @@ export const meta = {
 
 /**
  * Facts the business has never published anywhere that could be verified.
- * They are simply absent from the page — never filled with a placeholder,
+ * They are simply absent from the page, never filled with a placeholder and
  * never guessed. Listed in the README so the owner knows what to send.
  */
 export const pending = [

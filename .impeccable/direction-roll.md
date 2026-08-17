@@ -1,4 +1,4 @@
-# Direction decision — M&A Auto Service
+# Direction decision for M&A Auto Service
 
 Surface: single marketing page (`app/page.tsx`). Mode: **Persuade**.
 Seed key: `c9b5631d` (scope direction, mode persuade, assigned index 7).
@@ -25,7 +25,7 @@ the dark "performance" garage with a supercar hero.
 
 | Challenger | Verdict |
 |---|---|
-| CRT oscilloscope signal bench | Fuses on meaning — diagnosis is the reviews' own claim — but loses audience identification. A driver with a dead battery does not see themselves in a lab instrument. |
+| CRT oscilloscope signal bench | Fuses on meaning, since diagnosis is the reviews' own claim, but loses audience identification. A driver with a dead battery does not see themselves in a lab instrument. |
 | Brick build instructions | Real automotive DNA in the exploded diagram (Haynes lineage), but toy sky-blue is the wrong register for a trust decision made in a hurry. |
 | One-bit desktop | Coherent interface language, nothing in it belongs to a Bristol driver's world. |
 | Flash-scrawl club sleeve | Hard fail on assets: requires photography, and PRODUCT.md records that none exists. |
@@ -38,7 +38,7 @@ was presented as the committed direction.
 ## Outcome: the user took the standing exit
 
 Presented through the decision page (`serve-question.mjs`). The user chose
-**canon** — the category standard, played straight. `ANSWER: {"optionId":"canon"}`.
+**canon**, the category standard played straight. `ANSWER: {"optionId":"canon"}`.
 
 This is the second time this user has taken canon over a rolled world for a
 trade client (the first was showroomdetailing, 13 Aug 2026). It is now recorded
@@ -50,10 +50,10 @@ showroomdetailing and CJValeting sites**. Accent: **signal amber**.
 ## What canon means here
 
 The dark professional garage site done at full fidelity, no irony and no
-smuggled quirk. It inherits the house system those two sites established —
-graphite ground, hairline rules as the only structural device, one rationed
+smuggled quirk. It inherits the house system those two sites established
+(graphite ground, hairline rules as the only structural device, one rationed
 chromatic accent, wide-stretched Archivo caps against plain sentence-case body,
-essentially flat depth — and diverges on two points forced by this client:
+essentially flat depth) and diverges on two points forced by this client:
 
 - **Accent is signal amber, not champagne gold or claret.** Workshop and
   high-vis language, correct for a unit on an industrial estate, and the
@@ -63,5 +63,5 @@ essentially flat depth — and diverges on two points forced by this client:
   photographs at all. The replacement is not a stock photo and not an empty
   hero: it is *light*. A single amber worklamp pool falls across the graphite,
   which is what the unit actually looks like at eight in the evening with the
-  door up — the one thing about the premises that can be rendered truthfully
-  without a camera. The name and the number stand in that light.
+  door up. It is the one thing about the premises that can be rendered
+  truthfully without a camera. The name and the number stand in that light.

@@ -37,7 +37,7 @@ Two consequences worth knowing before editing:
 ## Facts the owner still needs to supply
 
 These are tracked in the `pending` export in `content/site.ts` and are simply
-absent from the rendered page — no placeholders, no "call to confirm" filler.
+absent from the rendered page. No placeholders, no "call to confirm" filler.
 
 | Missing | Effect on the page |
 | --- | --- |
@@ -60,7 +60,7 @@ address. `aggregateRating` carries the genuine 4.8 from 102 Google reviews. No
 ## Address note
 
 The Google listing renders the address as "Estate, Hallen Indusrial, Severn Rd,
-Hallen, Bristol BS10 7SE" — Google's own field order is scrambled and
+Hallen, Bristol BS10 7SE". Google's own field order is scrambled there and
 "Industrial" is misspelt on the listing. It is normalised throughout this site
 to "Hallen Industrial Estate, Severn Road, Hallen, Bristol BS10 7SE". Street,
 locality and postcode are unchanged.

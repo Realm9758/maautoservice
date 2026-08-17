@@ -46,11 +46,11 @@ Confirmed by the Google Business Profile:
 
 Evidenced by customer reviews, and the only services the site may claim (user decision, init round):
 
-- Diagnostics — "Diagnosed the issue quickly and solved the problem." (Dean)
-- Batteries — "Great service, original battery didn't work so gave a more expensive one." (Dom Pontin)
+- Diagnostics, from Dean's review: "Diagnosed the issue quickly and solved the problem."
+- Batteries, from Dom Pontin's review: "Great service, original battery didn't work so gave a more expensive one."
 - General repairs and servicing, as implied by the "Mechanic" category.
 
-**Explicitly undecided — must not be invented or implied anywhere on the page:**
+**Explicitly undecided. None of the following may be invented or implied anywhere on the page:**
 
 - Whether the garage is an MOT test centre. No MOT claim of any kind.
 - Any other named service: brakes, clutches, tyres, exhausts, air-con, suspension, cambelts, welding, recovery, courtesy cars, warranties, collection and delivery.
@@ -72,12 +72,12 @@ Evidenced by customer reviews, and the only services the site may claim (user de
 
 - Google rating: 4.8 from 102 reviews.
 - Two complete verbatim review quotes:
-  - Dom Pontin — "Great service, original battery didn't work so gave a more expensive one."
-  - Dean — "Diagnosed the issue quickly and solved the problem."
+  - Dom Pontin: "Great service, original battery didn't work so gave a more expensive one."
+  - Dean: "Diagnosed the issue quickly and solved the problem."
 
 **Deliberately excluded:**
 
-- A third review snippet ("In a dingy crappy back street unit." — Bubba Smith) is a fragment lifted out of a longer review and reads as an insult without its surrounding sentence. It is not published.
+- A third review snippet, "In a dingy crappy back street unit." by Bubba Smith, is a fragment lifted out of a longer review and reads as an insult without its surrounding sentence. It is not published.
 
 **Absent, and must not be fabricated:**
 
